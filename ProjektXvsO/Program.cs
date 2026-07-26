@@ -7,7 +7,7 @@ namespace Projekt1
     {
         static void PlanszaRysowanie(int centerX, int centerY, string[,] plansza)
         {
-            //Generowanie miejsca na planszy
+            //Rysowanie planszy w konsoli
             for (int i = 0; i < 5; i++)
             {
                 Console.SetCursorPosition(centerX, centerY + i);
@@ -85,7 +85,7 @@ namespace Projekt1
                 Console.SetCursorPosition(centerX, centerY);
                 PlanszaRysowanie(centerX, centerY, plansza);
 
-                //Tekst informacyjna czyja jest tura
+                //Tekst informacyjny czyja jest tura
                 Console.WriteLine();
                 Console.Write("Tura: ");
                 if (tura == 1)
@@ -104,7 +104,7 @@ namespace Projekt1
                     //Jeśli miejsce jest wolne, zamienia tło zaznaczenia na zielono
                     Console.BackgroundColor = ConsoleColor.Green;
 
-                //Wstawia znaki na planszy
+                //Wyświetla podświetlone pole kursora
                 Console.Write(plansza[y, x]);
 
                 //Wybieranie miejsca za pomocą klawiszy WASD i strzałek
@@ -203,7 +203,7 @@ namespace Projekt1
                     wygrana = true;
                 }
 
-                // Warunki do remisu
+                // Warunki dla remisu
                 if (plansza[0, 0] != " " && plansza[0, 2] != " " && plansza[0, 4] != " " &&
                     plansza[2, 0] != " " && plansza[2, 2] != " " && plansza[2, 4] != " " &&
                     plansza[4, 0] != " " && plansza[4, 2] != " " && plansza[4, 4] != " ")
